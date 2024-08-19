@@ -64,7 +64,6 @@ jobs:
         name: Build and push (non PR)
         uses: docker/bake-action@v5.5.0
         with:
-          workdir: .docker
           push: ${{ env.PUSH }}
           set: |
             *.cache-from=type=gha,scope=foxglove
@@ -74,7 +73,6 @@ jobs:
         name: Build and push (PR)
         uses: docker/bake-action@v5.5.0
         with:
-          workdir: .docker
           targets: |
             ${{ matrix.stage }}
           set: |
