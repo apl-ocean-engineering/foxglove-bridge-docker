@@ -62,7 +62,7 @@ jobs:
 
       - if: github.event_name == 'push'
         name: Build and push (non PR)
-        uses: docker/bake-action@v5.5.0
+        uses: docker/bake-action@v5.7.0
         with:
           push: ${{ env.PUSH }}
           set: |
@@ -71,7 +71,7 @@ jobs:
 
       - if: github.event_name == 'pull_request'
         name: Build and push (PR)
-        uses: docker/bake-action@v5.5.0
+        uses: docker/bake-action@v5.7.0
         with:
           targets: |
             ${{ matrix.stage }}
