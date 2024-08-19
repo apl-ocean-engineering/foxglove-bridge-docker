@@ -1,0 +1,4 @@
+services:
+  blue:
+    image: ghcr.io/apl-ocean-engineering:rolling-robot
+    network_mode: host
