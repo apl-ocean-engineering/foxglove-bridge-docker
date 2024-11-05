@@ -38,5 +38,5 @@ target "foxglove-bridge" {
   cache_to = [
     "type=local,dest=.docker-cache"
   ]
-  platforms = ["linux/amd64"]
+  platforms = ["linux/amd64", "linux/arm64"]
 }
